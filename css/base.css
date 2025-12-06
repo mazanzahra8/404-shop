@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "IranYekanWeb";
+    src: url("fonts/iran-yekan/IranYekanWeb-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    /* light */
+}
+
+@font-face {
+    font-family: "IranYekanWeb";
+    src: url("fonts/iran-yekan/IranYekanWeb-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    /* regular */
+}
+
+@font-face {
+    font-family: "IranYekanWeb";
+    src: url("fonts/iran-yekan/IranYekanWeb-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    /* medium */
+}
+
+@font-face {
+    font-family: "IranYekanWeb";
+    src: url("fonts/iran-yekan/IranYekanWeb-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    /* bold */
+}
+
+@font-face {
+    font-family: "IranYekanWeb";
+    src: url("fonts/iran-yekan/IranYekanWeb-ExtraBold.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    /* heavy */
+}
+
+::selection {
+    @apply bg-primary-500 text-white;
+}
+::-moz-selection {
+    @apply bg-primary-500 text-white;
+}
+
+/*
+More Template Custom CSS Here...
+ */
+body{
+    font-family: 'IranYekanWeb', tahoma, serif;
+}
+
+.container-standard {
+    max-width: min(90%,70rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .container-standard-wide {
+    max-width: min(100%,85rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .container-standard-mobile-full-width {
+      max-width: 100%;
+    }
+  }
+
+
+  /* NAVBAR STYLES */
+
+.navBar {
+  transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+
+
+/* NAVBAR STYLES */
+  
+  
+ /* HERO STYLES */
+
+ 
+ #heroSwiperPagination .swiper-pagination-bullet-active{
+  @apply !bg-primary-400 w-5 rounded-[30px];
+ }
+ 
+
+
+
+ #portoflioSwiperPagination .swiper-pagination-bullet-active{
+  @apply !bg-primary-400 w-5 rounded-[30px];
+ }
+ 
+
+ 
+ #commentSwiperPagination .swiper-pagination-bullet-active{
+  @apply !bg-primary-400 w-5 rounded-[30px];
+ }
+
+
+
+
+.filterSelectSearch{
+    background-position: left 0.5rem center;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    @apply bg-gray-200 text-sm border-none py-3 focus:ring-0
+}
+
+.filterSelectSearch option{
+    @apply bg-gray-200 backdrop-blur-xl text-primary-50 font-light;
+}
+
+
+.popCategoryImgShadow {
+    filter:
+        drop-shadow(-11px 7px 29px rgba(0, 0, 0, 0.15))
+        drop-shadow(-43px 30px 52px rgba(0, 0, 0, 0.13))
+        drop-shadow(-104px 42px 35px rgba(0, 0, 0, 0.10));
+}
