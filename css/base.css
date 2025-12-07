@@ -125,3 +125,18 @@ body{
         drop-shadow(-43px 30px 52px rgba(0, 0, 0, 0.13))
         drop-shadow(-104px 42px 35px rgba(0, 0, 0, 0.10));
 }
+
+
+.bannerImg3Shadow {
+    filter:
+            drop-shadow(-6px 6px 19px rgba(0, 0, 0, 0.20))
+            drop-shadow(-23px 26px 34px rgba(0, 0, 0, 0.17))
+            drop-shadow(-51px 58px 46px rgba(0, 0, 0, 0.10))
+            drop-shadow(-91px 103px 55px rgba(0, 0, 0, 0.03));
+}
+
+
+
+#blogSwiperPagination .swiper-pagination-bullet-active{
+    @apply bg-primary-500 w-5 rounded-[30px];
+}
