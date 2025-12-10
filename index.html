@@ -312,21 +312,32 @@
 
 
     <!-- POPULAR CATEGORIES SECTION -->
-     <section class="mt-48 mb-36 py-10">
+     <section class="mt-56 mb-36 py-10">
       <div class="relative container-standard container-standard-mobile-full-width pr-5 md:pr-0">
-          <div class="w-10 h-full absolute top-0 bottom-0 left-0 bg-gradient-to-r from-white z-[2]"></div>
+          <div class="flex lg:hidden items-start bg-[#EC1844] bottom-1/2 absolute rounded-xl -top-20 left-5 md:left-0 right-5 md:right-0 pt-3 px-5">
+              <div class="w-full flex items-center justify-between">
+                  <h2 class="text-xl font-bold text-white">
+                      پیشنهادات ویژه
+                  </h2>
+                  <a href="#" class="flex items-center gap-2 text-white">
+                      مشاهده همه
+                      <i class="fal fa-chevron-left"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="hidden lg:block w-10 h-full absolute top-0 bottom-0 left-0 bg-gradient-to-r from-white z-[2]"></div>
           <div x-data="{
           init() {
               this.$nextTick(() => {
                   new Swiper($refs.popCategorySwiper, {
-                      slidesPerView: 0.8,
-                      spaceBetween: 7,
+                      slidesPerView: 1.7,
+                      spaceBetween: 16,
                       breakpoints: {
                           480: {
                               slidesPerView: 1.3,
                           },
                           768: {
-                              slidesPerView: 1.8,
+                              slidesPerView: 3.2,
                               spaceBetween: 10,
 
                           },
@@ -346,7 +357,7 @@
           }
       }"
         class="flex items-center !h-full">
-          <div class="w-1/2 md:w-1/3 lg:w-1/5 overflow-hidden flex flex-col h-full gap-2 items-center justify-center bg-[#EC1844] rounded-2xl py-5 pl-4 text-white">
+          <div class="lg:w-1/5 overflow-hidden hidden lg:flex flex-col h-full gap-2 items-center justify-center bg-[#EC1844] rounded-2xl py-5 pl-4 text-white">
             <h3 class="relative text-xl font-bold">
                 پیشنهادات ویژه
             </h3>
@@ -360,7 +371,7 @@
             <div class="flex grow"></div>
               <img src="images/pop-category-img.webp" alt="" class="w-4/5 mt-7 popCategoryImgShadow">
           </div>
-          <div class="relative w-1/2 md:w-2/3 lg:w-4/5 mr-5">
+          <div class="relative w-full lg:w-4/5 pr-5">
               <div class="absolute top-1/2 -translate-y-1/2 lg:-left-10 bg-white hidden lg:flex 2xl:hidden items-center justify-center size-9 shadow-md rounded-lg cursor-pointer z-[2]" x-ref="popCategorySwiperPrev">
                   <i class="fal fa-arrow-left text-xl text-black"></i>
               </div>
@@ -999,7 +1010,7 @@
                                         slidesPerView: 1.7,
                                     },
                                     768: {
-                                        slidesPerView: 2.8,
+                                        slidesPerView: 4.2,
                                     },
                                     1024: {
                                         slidesPerView: 3.2,
@@ -1089,10 +1100,10 @@
 
 
     <!-- BLOG SECTION -->
-      <section class="my-32">
-          <div class="container-standard">
+      <section class="mt-32">
+          <div class="container-standard container-standard-wide">
               <div class="flex flex-col gap-10">
-                  <div class="flex items-center justify-between">
+                  <div class="flex items-center justify-between px-5 md:px-10 lg:px-0">
                       <div class="flex flex-col gap-2">
                           <h2 class="relative text-xl lg:text-2xl font-bold text-center text-black">
                               آخرین مقالات
@@ -1108,45 +1119,31 @@
                           </div>
                       </a>
                   </div>
-                  <div class="flex flex-col lg:flex-row items-center gap-5">
-                      <div class="w-full lg:w-2/5 h-full" x-data="{
-                init() {
-                    this.$nextTick(() => {
-                        new Swiper($refs.blogSwiper, {
-                            slidesPerView: 1,
-                            spaceBetween: 20,
-                            breakpoints: {
-                                480: {
-                                    slidesPerView: 1.7,
-                                },
-                                768: {
-                                    slidesPerView: 2.8,
-                                },
-                                1024: {
-                                    slidesPerView: 3.2,
-                                },
-                                1280: {
+                  <div class="grid grid-cols-1 lg:grid-cols-7 gap-10 lg:gap-5">
+                      <div class="col-span-1 lg:col-span-3 h-full px-5 md:px-10 lg:px-0" x-data="{
+                        init() {
+                            this.$nextTick(() => {
+                                new Swiper($refs.blogSwiper, {
                                     slidesPerView: 1,
-                                },
-                            },
-                             pagination: {
-                                 el: $refs.blogSwiperPagination,
-                                 clickable: true,
-                               },
-                             navigation: {
-                                nextEl: $refs.blogSwiperNext,
-                                prevEl: $refs.blogSwiperPrev,
-                              },
-                        });
-                    });
-                }
-            }"
+                                    spaceBetween: 20,
+                                     pagination: {
+                                         el: $refs.blogSwiperPagination,
+                                         clickable: true,
+                                       },
+                                     navigation: {
+                                        nextEl: $refs.blogSwiperNext,
+                                        prevEl: $refs.blogSwiperPrev,
+                                      },
+                                });
+                            });
+                        }
+                    }"
                       >
                           <div class="relative h-full w-full">
-                              <div class="swiper !flex !h-full" x-ref="blogSwiper">
+                              <div class="swiper rounded-2xl !flex !h-full" x-ref="blogSwiper">
                                   <div class="swiper-wrapper !h-auto">
                                       <div class="swiper-slide !h-full">
-                                          <div class="relative w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 rounded-2xl overflow-hidden">
+                                          <div class="relative w-full h-full bg-white border border-gray-200 flex flex-col items-center gap-3 rounded-2xl overflow-hidden">
                                               <div class="absolute rounded-lg bg-white/60 text-sm px-4 py-2 top-2 right-3">
                                                   خرید لبتاپ
                                               </div>
@@ -1169,40 +1166,40 @@
                                       </div>
                                   </div>
                               </div>
-                              <div class="flex justify-center mt-5" id="blogSwiperPagination" x-ref="blogSwiperPagination"></div>
+                              <div class="flex justify-center mt-3" id="blogSwiperPagination" x-ref="blogSwiperPagination"></div>
 
                           </div>
                       </div>
-                      <div class="w-full lg:w-3/5" x-data="{
-                init() {
-                    this.$nextTick(() => {
-                        new Swiper($refs.blogSwiper2, {
-                            slidesPerView: 1.4,
-                            spaceBetween: 20,
-                            breakpoints: {
-                                480: {
-                                    slidesPerView: 1.7,
-                                },
-                                768: {
-                                    slidesPerView: 2.8,
-                                },
-                                1024: {
-                                    slidesPerView: 3.2,
-                                },
-                                1280: {
-                                    slidesPerView: 2.5,
-                                },
-                            },
-                             navigation: {
-                                nextEl: $refs.blogSwiper2Next,
-                                prevEl: $refs.blogSwiper2Prev,
-                              },
-                        });
-                    });
-                }
-            }"
+                      <div class="col-span-1 h-full lg:col-span-4 pr-5 md:pr-10 lg:pr-0" x-data="{
+                        init() {
+                            this.$nextTick(() => {
+                                new Swiper($refs.blogSwiper2, {
+                                    slidesPerView: 1.4,
+                                    spaceBetween: 20,
+                                    breakpoints: {
+                                        480: {
+                                            slidesPerView: 1.7,
+                                        },
+                                        768: {
+                                            slidesPerView: 2.8,
+                                        },
+                                        1024: {
+                                            slidesPerView: 2.2,
+                                        },
+                                        1280: {
+                                            slidesPerView: 2.5,
+                                        },
+                                    },
+                                     navigation: {
+                                        nextEl: $refs.blogSwiper2Next,
+                                        prevEl: $refs.blogSwiper2Prev,
+                                      },
+                                });
+                            });
+                        }
+                    }"
                       >
-                          <div class="relative w-full">
+                          <div class="relative h-full w-full">
                               <div class="hidden lg:block w-10 h-full absolute top-0 bottom-0 left-0 bg-gradient-to-r from-white z-[2]"></div>
                               <div class="hidden lg:block w-10 h-full absolute top-0 bottom-0 right-0 bg-gradient-to-l from-white z-[2]"></div>
                               <div class="absolute top-1/2 -translate-y-1/2 lg:-left-10 bg-white hidden lg:flex 2xl:hidden items-center justify-center size-9 shadow-md rounded-lg cursor-pointer z-[2]" x-ref="blogSwiper2Prev">
@@ -1214,98 +1211,106 @@
                               <div class="swiper !flex !h-full" x-ref="blogSwiper2">
                                   <div class="swiper-wrapper !h-auto">
                                       <div class="swiper-slide !h-full">
-                                          <div class="w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
-                                              <a href="#" class="flex items-center justify-center aspect-square w-full overflow-hidden rounded-xl">
+                                          <div class="relative w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
+                                              <a href="#" class="absolute inset-0 z-[2]"></a>
+                                              <div class="absolute rounded-lg bg-white/60 text-sm px-4 py-2 top-4 right-3">
+                                                  خرید لبتاپ
+                                              </div>
+                                              <div class="flex items-center justify-center aspect-square w-full overflow-hidden rounded-xl">
                                                   <img src="images/blog2-1.webp" alt="" class="w-full h-full object-cover">
-                                              </a>
-                                              <a href="#">
-                                                  <h3 class="text-sm font-semibold line-clamp-3">
-                                                      مقایسه گوشی‌های پرفروش ۱۴۰۴ بازار؛ کدام مدل برای شما بهتر است؟
-                                                  </h3>
-                                              </a>
+                                              </div>
+                                              <h3 class="text-sm font-semibold line-clamp-3">
+                                                  مقایسه گوشی‌های پرفروش ۱۴۰۴ بازار؛ کدام مدل برای شما بهتر است؟
+                                              </h3>
                                               <div class="flex flex-grow"></div>
                                               <div class="flex items-center w-full justify-between">
-                                                  <div class="flex items-center">
+                                                  <div class="flex items-center gap-1">
                                                       <i class="fal fa-clock"></i>
                                                       <span class="text-xs font-light">
                                                           زمان مطالعه: ۱۰ دقیقه
                                                       </span>
                                                   </div>
-                                                  <a href="#" class="size-8 bg-primary flex items-center justify-center rounded">
+                                                  <div class="size-8 bg-primary flex items-center justify-center rounded">
                                                       <i class="fal fa-chevron-left"></i>
-                                                  </a>
+                                                  </div>
                                               </div>
                                           </div>
                                       </div>
                                       <div class="swiper-slide !h-full">
-                                          <div class="w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
-                                              <a href="#" class="flex items-center justify-center aspect-square w-full overflow-hidden rounded-xl">
-                                                  <img src="images/blog2-1.webp" alt="" class="w-full h-full object-cover">
-                                              </a>
-                                              <a href="#">
-                                                  <h3 class="text-sm font-semibold line-clamp-3">
-                                                      مقایسه گوشی‌های پرفروش ۱۴۰۴ بازار؛ کدام مدل برای شما بهتر است؟
-                                                  </h3>
-                                              </a>
+                                          <div class="relative w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
+                                              <a href="#" class="absolute inset-0 z-[2]"></a>
+                                              <div class="absolute rounded-lg bg-white/60 text-sm px-4 py-2 top-4 right-3">
+                                                  خرید لبتاپ
+                                              </div>
+                                              <div class="flex items-center justify-center aspect-square w-full overflow-hidden rounded-xl">
+                                                  <img src="images/blog2-2.webp" alt="" class="w-full h-full object-cover">
+                                              </div>
+                                              <h3 class="text-sm font-semibold line-clamp-3">
+                                                  مقایسه گوشی‌های پرفروش ۱۴۰۴ بازار؛ کدام مدل برای شما بهتر است؟
+                                              </h3>
                                               <div class="flex flex-grow"></div>
                                               <div class="flex items-center w-full justify-between">
-                                                  <div class="flex items-center">
+                                                  <div class="flex items-center gap-1">
                                                       <i class="fal fa-clock"></i>
                                                       <span class="text-xs font-light">
                                                           زمان مطالعه: ۱۰ دقیقه
                                                       </span>
                                                   </div>
-                                                  <a href="#" class="size-8 bg-primary flex items-center justify-center rounded">
+                                                  <div class="size-8 bg-primary flex items-center justify-center rounded">
                                                       <i class="fal fa-chevron-left"></i>
-                                                  </a>
+                                                  </div>
                                               </div>
                                           </div>
                                       </div>
                                       <div class="swiper-slide !h-full">
-                                          <div class="w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
-                                              <a href="#" class="flex items-center justify-center aspect-square w-full overflow-hidden rounded-xl">
+                                          <div class="relative w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
+                                              <a href="#" class="absolute inset-0 z-[2]"></a>
+                                              <div class="absolute rounded-lg bg-white/60 text-sm px-4 py-2 top-4 right-3">
+                                                  خرید لبتاپ
+                                              </div>
+                                              <div class="flex items-center justify-center aspect-square w-full overflow-hidden rounded-xl">
                                                   <img src="images/blog2-1.webp" alt="" class="w-full h-full object-cover">
-                                              </a>
-                                              <a href="#">
-                                                  <h3 class="text-sm font-semibold line-clamp-3">
-                                                      مقایسه گوشی‌های پرفروش ۱۴۰۴ بازار؛ کدام مدل برای شما بهتر است؟
-                                                  </h3>
-                                              </a>
+                                              </div>
+                                              <h3 class="text-sm font-semibold line-clamp-3">
+                                                  مقایسه گوشی‌های پرفروش ۱۴۰۴ بازار؛ کدام مدل برای شما بهتر است؟
+                                              </h3>
                                               <div class="flex flex-grow"></div>
                                               <div class="flex items-center w-full justify-between">
-                                                  <div class="flex items-center">
+                                                  <div class="flex items-center gap-1">
                                                       <i class="fal fa-clock"></i>
                                                       <span class="text-xs font-light">
                                                           زمان مطالعه: ۱۰ دقیقه
                                                       </span>
                                                   </div>
-                                                  <a href="#" class="size-8 bg-primary flex items-center justify-center rounded">
+                                                  <div class="size-8 bg-primary flex items-center justify-center rounded">
                                                       <i class="fal fa-chevron-left"></i>
-                                                  </a>
+                                                  </div>
                                               </div>
                                           </div>
                                       </div>
                                       <div class="swiper-slide !h-full">
-                                          <div class="w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
-                                              <a href="#" class="flex items-center justify-center aspect-square w-full overflow-hidden rounded-xl">
-                                                  <img src="images/blog2-1.webp" alt="" class="w-full h-full object-cover">
-                                              </a>
-                                              <a href="#">
-                                                  <h3 class="text-sm font-semibold line-clamp-3">
-                                                      مقایسه گوشی‌های پرفروش ۱۴۰۴ بازار؛ کدام مدل برای شما بهتر است؟
-                                                  </h3>
-                                              </a>
+                                          <div class="relative w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
+                                              <a href="#" class="absolute inset-0 z-[2]"></a>
+                                              <div class="absolute rounded-lg bg-white/60 text-sm px-4 py-2 top-4 right-3">
+                                                  خرید لبتاپ
+                                              </div>
+                                              <div class="flex items-center justify-center aspect-square w-full overflow-hidden rounded-xl">
+                                                  <img src="images/blog2-2.webp" alt="" class="w-full h-full object-cover">
+                                              </div>
+                                              <h3 class="text-sm font-semibold line-clamp-3">
+                                                  مقایسه گوشی‌های پرفروش ۱۴۰۴ بازار؛ کدام مدل برای شما بهتر است؟
+                                              </h3>
                                               <div class="flex flex-grow"></div>
                                               <div class="flex items-center w-full justify-between">
-                                                  <div class="flex items-center">
+                                                  <div class="flex items-center gap-1">
                                                       <i class="fal fa-clock"></i>
                                                       <span class="text-xs font-light">
                                                           زمان مطالعه: ۱۰ دقیقه
                                                       </span>
                                                   </div>
-                                                  <a href="#" class="size-8 bg-primary flex items-center justify-center rounded">
+                                                  <div class="size-8 bg-primary flex items-center justify-center rounded">
                                                       <i class="fal fa-chevron-left"></i>
-                                                  </a>
+                                                  </div>
                                               </div>
                                           </div>
                                       </div>
@@ -1322,140 +1327,189 @@
 
   </main>
 
-  <footer class="bg-primary-50">
-    <div class="container-standard py-10">
-      <div class="flex flex-col gap-10">
-        <div class="grid grid-cols-2 lg:grid-cols-7 gap-10">
-          <div class="col-span-2 lg:col-span-3 flex flex-col items-start gap-10">
-            <div class="flex items-center justify-center lg:justify-normal gap-3">
-              <img src="images/logo.svg" alt="" class="w-14">
-              <div class="flex flex-col">
-                <h4 class="text-sm lg:text-base font-bold">
-                  فیت‌مارکت
-                </h4>
-                <span class="text-xs lg:text-sm">
-                  قدرت، سلامت، استایل؛ همه در فیت مارکت
-                </span>
+  <footer class="">
+      <div class="container-standard px-5 lg:px-10">
+          <div class="bg-white translate-y-24 border border-gray-200 py-10 flex flex-col md:flex-row gap-10 lg:gap-10 justify-between px-20 rounded-2xl">
+              <div class="flex flex-col gap-5 items-center">
+                  <div class="size-8 lg:size-9 bg-[#A9D4CA] rounded-xl">
+                      <i class="fal fa-headphones text-[#34685C] text-3xl lg:text-4xl -translate-x-3 translate-y-3"></i>
+                  </div>
+                  <span class="text-[#34685C] text-sm lg:text-base font-semibold text-center">
+                      پشتیبانی ۲۴ ساعته
+                  </span>
               </div>
-            </div>
-            <p class="font-light">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
-            </p>
-            <a href="#" class="text-primary-800 border border-primary-800 py-2 px-4 rounded-full">
-              درباره ما
-            </a>
-          </div>
-          <div class="flex flex-col items-center lg:items-start gap-5">
-            <h4 class="text-lg font-bold text-primary-950">
-              دسترسی سریع
-            </h4>
-            <ul class="flex flex-col items-center lg:items-start font-light gap-5">
-              <li>
-                <a href="#">
-                  فروشگاه
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  دوره‌ها
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  برنامه اختصاصی
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  بلاگ
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="flex flex-col items-center lg:items-start gap-5">
-            <h4 class="text-lg font-bold text-primary-950">
-              مشتریان
-            </h4>
-            <ul class="flex flex-col items-center lg:items-start font-light gap-5">
-              <li>
-                <a href="#">
-                  تماس با ما
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  پشتیبانی
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  راهنما
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  قوانین و شرایط
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-span-2 flex justify-center lg:justify-end">
-            <div class="flex flex-col items-center lg:items-start gap-5">
-              <h4 class="text-lg font-bold text-primary-950">
-                ارتباط با ما
-              </h4>
-              <div class="flex items-center gap-5 text-gray-700">
-                <div class="flex items-center gap-2">
-                  <i class="fas fa-mobile text-xl text-primary-600"></i>
-                  شماره همراه:
-                </div>
-                <a href="#">
-                  ۴۴۵۵ ۲۲۲ ۰۹۱۳  
-                </a>
+              <div class="flex flex-col gap-5 items-center">
+                  <div class="size-8 lg:size-9 bg-[#A9D4CA] rounded-xl">
+                      <i class="fal fa-award text-[#34685C] text-3xl lg:text-4xl -translate-x-3 translate-y-3"></i>
+                  </div>
+                  <span class="text-[#34685C] text-sm lg:text-base font-semibold text-center">
+                        تضمین کیفیت کالا
+                  </span>
               </div>
-              <div class="flex items-center gap-5 text-gray-700">
-                <div class="flex items-center gap-2">
-                  <i class="fas fa-fax text-xl text-primary-600"></i>
-                  نمابر:
-                </div>
-                <a href="#">
-                  ۰۳۱-۵۵۳۳۲۲۴۴
-                </a>
+              <div class="flex flex-col gap-5 items-center">
+                  <div class="size-8 lg:size-9 bg-[#A9D4CA] rounded-xl">
+                      <i class="fal fa-clock text-[#34685C] text-3xl lg:text-4xl -translate-x-3 translate-y-3"></i>
+                  </div>
+                  <span class="text-[#34685C] text-sm lg:text-base font-semibold text-center">
+                        فرصت ۷ روزه بازگشت کالا
+                  </span>
               </div>
-              <div class="flex items-center gap-5 text-gray-700">
-                <div class="flex items-center gap-2">
-                  <i class="fas fa-envelope text-xl text-primary-600"></i>
-                  ایمیل:
-                </div>
-                <a href="#">
-                  info@fitmarket.co
-                </a>
+              <div class="flex flex-col gap-5 items-center">
+                  <div class="size-8 lg:size-9 bg-[#A9D4CA] rounded-xl">
+                      <i class="fal fa-credit-card text-[#34685C] text-3xl lg:text-4xl -translate-x-3 translate-y-3"></i>
+                  </div>
+                  <span class="text-[#34685C] text-sm lg:text-base font-semibold text-center">
+                        پرداخت امن  از درگاه بانکی
+                  </span>
               </div>
-            </div>
           </div>
-        </div>
-        <div class="w-full rounded-full bg-body-color py-3 px-10 flex justify-between items-center">
-          <div class="flex items-center gap-3">
-            <a href="#" target="_blank" aria-label="اینستاگرام" class="bg-primary-800 text-xl text-white rounded-full size-8 flex items-center justify-center">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" target="_blank" aria-label="واتساپ" class="bg-primary-800 text-xl text-white rounded-full size-8 flex items-center justify-center">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="#" target="_blank" aria-label="تلگرام" class="bg-primary-800 text-xl text-white rounded-full size-8 flex items-center justify-center">
-              <i class="fab fa-telegram-plane"></i>
-            </a>
-          </div>
-          <img src="images/enemad.webp" alt="" class="w-10">
-        </div>
       </div>
-    </div>
+      <div class="bg-black pt-32 pb-14">
+          <div class="container-standard">
+            <div class="flex flex-col gap-10 lg:gap-8 items-center">
+                <div class="grid grid-cols-2 lg:grid-cols-7 gap-10 lg:gap-5 text-white">
+                    <div class="flex flex-col items-start gap-5">
+                        <div class="flex items-center gap-2">
+                            <div class="bg-primary w-5 h-[3px] rounded-xl"></div>
+                            <h4 class="text-lg font-bold text-primary-950">
+                                دسترسی سریع
+                            </h4>
+                        </div>
+                        <ul class="flex flex-col items-center lg:items-start font-light gap-5">
+                            <li>
+                                <a href="#" class="hover:text-primary transition-all duration-300 ease-in-out">
+                                    فروشگاه
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-primary transition-all duration-300 ease-in-out">
+                                    پشتیبانی
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-primary transition-all duration-300 ease-in-out">
+                                    بلاگ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-primary transition-all duration-300 ease-in-out">
+                                    تماس با ما
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-primary transition-all duration-300 ease-in-out">
+                                    درباره ما
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col items-start gap-5">
+                        <div class="flex items-center gap-2">
+                            <div class="bg-primary w-5 h-[3px] rounded-xl"></div>
+                            <h4 class="text-lg font-semibold">
+                                محصولات
+                            </h4>
+                        </div>
+                        <ul class="flex flex-col items-start font-light gap-5">
+                            <li>
+                                <a href="#" class="hover:text-primary transition-all duration-300 ease-in-out">
+                                    لپ‌تاب
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-primary transition-all duration-300 ease-in-out">
+                                    موبایل و تبلت
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-primary transition-all duration-300 ease-in-out">
+                                    اسپیکر و بلندگو
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-primary transition-all duration-300 ease-in-out">
+                                    ساعت هوشمند
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-primary transition-all duration-300 ease-in-out">
+                                    هارد
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-span-2 lg:col-span-3 flex flex-col justify-center px-10 py-7 gap-5 bg-[#333333]/80 border border-[#D1D5DB]/10 rounded-2xl">
+                        <h4 class="text-sm lg:text-base font-semibold">
+                            فروشگاه اینترنتی ۴۰۴
+                        </h4>
+                        <p class="font-light text-sm lg:text-base">
+                            فروشگاه اینترنتی ۴۰۴ با هدف ارائه لپ‌تاپ‌ها و گجت‌های دیجیتال با کیفیت و اصل آغاز به‌کار کرده است.  تیم ما متعهد است تا با خدمات پس از فروش حرفه‌ای و پشتیبانی پاسخگو خریدی مطمئن و راحت برای شما فراهم کند.
+                        </p>
+                        <a href="#" class="text-white flex items-center gap-2">
+                            درباره ما
+                            <i class="fal fa-arrow-left"></i>
+                        </a>
+                    </div>
+                    <div class="col-span-2 flex justify-start lg:justify-end">
+                        <div class="flex flex-col items-start gap-8">
+                            <div class="flex items-center gap-2">
+                                <div class="bg-primary w-5 h-[3px] rounded-xl"></div>
+                                <h4 class="text-lg font-bold text-primary-950">
+                                    ارتباط با ما
+                                </h4>
+                            </div>
+                            <div class="flex items-center gap-3 text-white">
+                                <div class="flex font-semibold items-center gap-2">
+                                    <i class="fal fa-map-marker-alt text-xl"></i>
+                                    آدرس:
+                                </div>
+                                <a href="#" class="font-light text-xs">
+                                    مازندران، آمل، خیابان هراز، آفتاب یک
+                                </a>
+                            </div>
+                            <div class="flex  items-center gap-3 text-white">
+                                <div class="flex font-semibold text-sm items-center gap-2">
+                                    <i class="fal fa-phone rotate-90 text-xl"></i>
+                                    پشتیبانی:
+                                </div>
+                                <a href="#" class="font-light text-xs">
+                                    ۰۱۱-۴۴۴۴۵۴۰۴
+                                </a>
+                            </div>
+                            <div class="flex items-center gap-3 text-white">
+                                <div class="flex font-semibold text-sm items-center gap-2">
+                                    <i class="fal fa-clock text-xl"></i>
+                                    ساعات کاری:
+                                </div>
+                                <a href="#" class="font-light text-xs">
+                                    شنبه تا پنج شنبه 10 صبح تا 9 شب
+                                </a>
+                            </div>
+                            <div class="flex items-center gap-3 text-white">
+                                <div class="flex font-semibold text-sm items-center gap-2">
+                                    <i class="fal fa-comment-dots text-xl"></i>
+                                    ایمیل:
+                                </div>
+                                <a href="#" class="font-light text-xs">
+                                    info@yourname.ir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="images/enemad.webp" class="w-16">g
+                    <img src="images/zarinpal.webp" class="w-12">g
+                </div>
+            </div>
+          </div>
+      </div>
     <div class="container-standard">
       <div class="flex md:flex-row flex-col justify-between items-center gap-3 py-2 text-xs font-light">
         <div class=" flex items-center gap-1">
           <i class="fal fa-copyright"></i>
           <span>
-            ۱۴۰۴ | فیت‌مارکت
+                ۱۴۰۴ | فروشگاه اینترنتی ۴۰۴
           </span>
         </div>
         <div class="flex items-center gap-1">
@@ -1464,7 +1518,7 @@
             طراحی وب‌سایت 
           </span>
           <a href="#">
-            توسط پلتفرم شخصی غرفه‌چی
+              فروشگاهی کسب‌و‌کار غرفه‌چی
           </a>
         </div>
       </div>
