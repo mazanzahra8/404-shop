@@ -90,9 +90,56 @@ body{
  #heroSwiperPagination .swiper-pagination-bullet-active{
   @apply !bg-primary-400 w-5 rounded-[30px];
  }
- 
 
 
+ .swiper-button-disabled {
+    @apply !hidden;
+}
+
+.relative:has([x-ref="popCategorySwiperPrev"].swiper-button-disabled)
+.gradient-left {
+    opacity: 0;
+}
+
+.relative:has([x-ref="popCategorySwiperNext"].swiper-button-disabled)
+.gradient-right {
+    opacity: 0;
+}
+
+.relative:has([x-ref="newProductSwiperPrev"].swiper-button-disabled)
+.gradient-left {
+    opacity: 0;
+}
+
+.relative:has([x-ref="newProductSwiperNext"].swiper-button-disabled)
+.gradient-right {
+    opacity: 0;
+}
+
+.relative:has([x-ref="specialProductSwiperPrev"].swiper-button-disabled)
+.gradient-left {
+    opacity: 0;
+}
+
+.relative:has([x-ref="specialProductSwiperNext"].swiper-button-disabled)
+.gradient-right {
+    opacity: 0;
+}
+
+.relative:has([x-ref="blogSwiper2Prev"].swiper-button-disabled)
+.gradient-left {
+    opacity: 0;
+}
+
+.relative:has([x-ref="blogSwiper2Next"].swiper-button-disabled)
+.gradient-right {
+    opacity: 0;
+}
+
+.gradient-left,
+.gradient-right {
+    transition: opacity 0.3s ease;
+}
 
  #portoflioSwiperPagination .swiper-pagination-bullet-active{
   @apply !bg-primary-400 w-5 rounded-[30px];
@@ -140,3 +187,5 @@ body{
 #blogSwiperPagination .swiper-pagination-bullet-active{
     @apply bg-primary-500 w-5 rounded-[30px];
 }
+
+

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title> بادی فیت</title>
+  <title>فروشگاه 404</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="css/fontawesome-all.min.css" />
@@ -156,7 +156,7 @@
         <div class="swiper" id="heroSwiper" x-ref="heroSwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="#" class="w-full h-full">
+              <a href="#" class="w-full aspect-[393/458] lg:aspect-[1440/420] overflow-hidden">
                   <img src="images/hero-slide1.webp" alt="" class="hidden lg:block w-full h-full object-cover">
                   <img src="images/hero-slide1-mb.webp" alt="" class="block lg:hidden w-full h-full object-cover">
               </a>
@@ -215,7 +215,7 @@
                             <div class="swiper-slide !h-full">
                                 <a href="#" class="flex flex-col items-center gap-3">
                                     <div class="w-full aspect-square">
-                                        <img src="images/categories4.webp" alt="" class="mix-blend-multiply w-full h-full object-cover">
+                                        <img src="images/categories4.webp" alt="" class="w-full h-full object-cover">
                                     </div>
                                     <h3 class="text-sm lg:ext-base text-black text-center">
                                         موبایل و تبلت
@@ -325,7 +325,6 @@
                   </a>
               </div>
           </div>
-          <div class="hidden lg:block w-10 h-full absolute top-0 bottom-0 left-0 bg-gradient-to-r from-white z-[2]"></div>
           <div x-data="{
           init() {
               this.$nextTick(() => {
@@ -349,8 +348,8 @@
                           },
                       },
                       navigation: {
-                        nextEl: $refs.popCategorySwiperNext,
-                        prevEl: $refs.popCategorySwiperPrev,
+                        nextEl: $refs.popCategorySwiperPrev,
+                        prevEl: $refs.popCategorySwiperNext,
                       },
                   });
               });
@@ -372,6 +371,8 @@
               <img src="images/pop-category-img.webp" alt="" class="w-4/5 mt-7 popCategoryImgShadow">
           </div>
           <div class="relative w-full lg:w-4/5 pr-5">
+              <div class="gradient-right hidden lg:block w-10 h-full absolute top-0 bottom-0 right-5 bg-gradient-to-l from-white z-[2]"></div>
+              <div class="gradient-left hidden lg:block w-10 h-full absolute top-0 bottom-0 left-0 bg-gradient-to-r from-white z-[2]"></div>
               <div class="absolute top-1/2 -translate-y-1/2 lg:-left-10 bg-white hidden lg:flex 2xl:hidden items-center justify-center size-9 shadow-md rounded-lg cursor-pointer z-[2]" x-ref="popCategorySwiperPrev">
                   <i class="fal fa-arrow-left text-xl text-black"></i>
               </div>
@@ -381,7 +382,8 @@
             <div class="swiper !flex !h-full" x-ref="popCategorySwiper">
               <div class="swiper-wrapper !h-auto">
                   <div class="swiper-slide !h-full">
-                      <div class="w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
+                      <div class="relative w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
+                          <div class="absolute left-2 top-2 pl-2 pr-2 rounded-[15px] rounded-br-none bg-[#D32F2F] text-white ">۲۰٪</div>
                         <a href="#" class="flex items-center justify-center aspect-square w-44 overflow-hidden px-5">
                           <img src="images/pop-category1.webp" alt="" class="w-28 object-cover">
                         </a>
@@ -396,7 +398,9 @@
                                 <i class="fal fa-shopping-cart text-black text-lg"></i>
                             </button>
                             <div class="flex flex-col items-end gap-1">
-                                <s class="text-gray-400 text-xs font-light"></s>
+                                <s class="text-gray-400 text-xs font-light">
+                                    ۱۳٫۵۰۰٫۰۰۰
+                                </s>
                                 <span class="text-black text-sm font-bold">
                                     ۱۲٫۷۸۰٫۰۰۰ تومان
                                 </span>
@@ -549,8 +553,8 @@
                                     },
                                 },
                                  navigation: {
-                                    nextEl: $refs.newProductSwiperNext,
-                                    prevEl: $refs.newProductSwiperPrev,
+                                    nextEl: $refs.newProductSwiperPrev,
+                                    prevEl: $refs.newProductSwiperNext,
                                   },
                             });
                         });
@@ -558,8 +562,8 @@
                 }"
                   >
                       <div class="relative w-full pr-5 lg:pr-0">
-                          <div class="hidden lg:block w-10 h-full absolute top-0 bottom-0 left-0 bg-gradient-to-r from-white z-[2]"></div>
-                          <div class="hidden lg:block w-10 h-full absolute top-0 bottom-0 right-0 bg-gradient-to-l from-white z-[2]"></div>
+                          <div class="gradient-left hidden lg:block w-10 h-full absolute top-0 bottom-0 left-0 bg-gradient-to-r from-white z-[2]"></div>
+                          <div class="gradient-right hidden lg:block w-10 h-full absolute top-0 bottom-0 right-0 bg-gradient-to-l from-white z-[2]"></div>
                           <div class="absolute top-1/2 -translate-y-1/2 lg:-left-10 bg-white hidden lg:flex 2xl:hidden items-center justify-center size-9 shadow-md rounded-lg cursor-pointer z-[2]" x-ref="newProductSwiperPrev">
                               <i class="fal fa-arrow-left text-xl text-black"></i>
                           </div>
@@ -814,8 +818,8 @@
                                 },
                             },
                              navigation: {
-                                nextEl: $refs.specialProductSwiperNext,
-                                prevEl: $refs.specialProductSwiperPrev,
+                                nextEl: $refs.specialProductSwiperPrev,
+                                prevEl: $refs.specialProductSwiperNext,
                               },
                         });
                     });
@@ -823,8 +827,8 @@
             }"
               >
                   <div class="relative w-full pr-5 lg:pr-0">
-                      <div class="hidden lg:block w-10 h-full absolute top-0 bottom-0 left-0 bg-gradient-to-r from-white z-[2]"></div>
-                      <div class="hidden lg:block w-10 h-full absolute top-0 bottom-0 right-0 bg-gradient-to-l from-white z-[2]"></div>
+                      <div class="gradient-left hidden lg:block w-10 h-full absolute top-0 bottom-0 left-0 bg-gradient-to-r from-white z-[2]"></div>
+                      <div class="gradient-right hidden lg:block w-10 h-full absolute top-0 bottom-0 right-0 bg-gradient-to-l from-white z-[2]"></div>
                       <div class="absolute top-1/2 -translate-y-1/2 lg:-left-10 bg-white hidden lg:flex 2xl:hidden items-center justify-center size-9 shadow-md rounded-lg cursor-pointer z-[2]" x-ref="specialProductSwiperPrev">
                           <i class="fal fa-arrow-left text-xl text-black"></i>
                       </div>
@@ -1101,7 +1105,7 @@
 
     <!-- BLOG SECTION -->
       <section class="mt-32">
-          <div class="container-standard container-standard-wide">
+          <div class="container-standard container-standard-mobile-full-width">
               <div class="flex flex-col gap-10">
                   <div class="flex items-center justify-between px-5 md:px-10 lg:px-0">
                       <div class="flex flex-col gap-2">
@@ -1130,10 +1134,6 @@
                                          el: $refs.blogSwiperPagination,
                                          clickable: true,
                                        },
-                                     navigation: {
-                                        nextEl: $refs.blogSwiperNext,
-                                        prevEl: $refs.blogSwiperPrev,
-                                      },
                                 });
                             });
                         }
@@ -1191,8 +1191,8 @@
                                         },
                                     },
                                      navigation: {
-                                        nextEl: $refs.blogSwiper2Next,
-                                        prevEl: $refs.blogSwiper2Prev,
+                                        nextEl: $refs.blogSwiper2Prev,
+                                        prevEl: $refs.blogSwiper2Next,
                                       },
                                 });
                             });
@@ -1200,8 +1200,8 @@
                     }"
                       >
                           <div class="relative h-full w-full">
-                              <div class="hidden lg:block w-10 h-full absolute top-0 bottom-0 left-0 bg-gradient-to-r from-white z-[2]"></div>
-                              <div class="hidden lg:block w-10 h-full absolute top-0 bottom-0 right-0 bg-gradient-to-l from-white z-[2]"></div>
+                              <div class="gradient-left hidden lg:block w-10 h-full absolute top-0 bottom-0 left-0 bg-gradient-to-r from-white z-[2]"></div>
+                              <div class="gradient-right hidden lg:block w-10 h-full absolute top-0 bottom-0 right-0 bg-gradient-to-l from-white z-[2]"></div>
                               <div class="absolute top-1/2 -translate-y-1/2 lg:-left-10 bg-white hidden lg:flex 2xl:hidden items-center justify-center size-9 shadow-md rounded-lg cursor-pointer z-[2]" x-ref="blogSwiper2Prev">
                                   <i class="fal fa-arrow-left text-xl text-black"></i>
                               </div>
