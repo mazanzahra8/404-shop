@@ -74,9 +74,14 @@
              <button type="button" class="lg:bg-primary flex items-center justify-center text-black size-10 rounded-lg">
                  <i class="fal fa-shopping-cart text-xl lg:text-lg"></i>
              </button>
-             <a href="#" class="flex items-center justify-center gap-2  lg:py-2 lg:px-4 text-black bg-primary-50 rounded-lg">
-                 <div class="bg-primary flex items-center justify-center text-black size-10 lg:size-7 rounded-lg">
-                     <i class="fal fa-user text-xl lg:text-lg"></i>
+             <a href="#" class="group relative z-[0] flex items-center justify-center gap-2  lg:py-2 lg:px-4 text-black bg-primary-50 rounded-lg transition-all duration-300 ease-in-out
+                after:absolute after:bg-primary-500 after:h-full after:w-0 after:right-0 after:left-0 after:-z-[1] hover:after:w-full after:transition-all after:duration-500  after:ease-in-out after:rounded-lg
+              ">
+                 <div class="relative overflow-hidden bg-primary z-[0] flex items-center justify-center text-black size-10 lg:size-7 rounded-lg
+                            after:absolute after:inset-0  after:-z-[1] group-hover:after:bg-white after:transition-all after:duration-500  after:ease-in-out after:rounded-lg
+               ">
+                     <i class="fal fa-user text-xl lg:text-lg group-hover:opacity-0 -translate-x-2 group-hover:translate-x-6 transition-all duration-300 ease-in-out"></i>
+                     <i class="fal fa-user text-xl lg:text-lg opacity-0 group-hover:opacity-100 -translate-x-6 group-hover:translate-x-2 transition-all duration-300 ease-in-out"></i>
                  </div>
                  <span class="hidden lg:block">
                   ورود | ثبت‌نام
@@ -162,23 +167,23 @@
               </a>
             </div>
             <div class="swiper-slide">
-                  <a href="#" class="w-full h-full">
-                      <img src="images/hero-slide2.webp" alt="" class="hidden lg:block w-full h-full object-cover">
-                      <img src="images/hero-slide2-mb.webp" alt="" class="block lg:hidden w-full h-full object-cover">
+                  <a href="#" class="w-full aspect-[393/458] lg:aspect-[1440/420] overflow-hidden">
+                      <img src="images/hero-slide2.webp" alt="" class="hidden lg:block w-full h-[full] object-cover">
+                      <img src="images/hero-slide1-mb.webp" alt="" class="block lg:hidden w-full h-full object-cover">
                   </a>
               </div>
           </div>
         </div>
       </div>
         <!-- CATEGORIES SECTION -->
-        <div class="absolute w-full left-1/2 -translate-x-1/2 -bottom-28 lg:-bottom-40 xl:-bottom-32 z-[2] container-standard">
+        <div class="absolute w-full left-1/2 -translate-x-1/2 -bottom-28 lg:-bottom-40 xl:-bottom-32 z-[2] drop-shadow container-standard">
             <div x-data="{
           init() {
               this.$nextTick(() => {
                   new Swiper($refs.categorySwiper, {
-                      slidesPerView: 3.5,
+                      slidesPerView: 2.7,
                       loop: true,
-                      spaceBetween: 30,
+                      spaceBetween: 0,
                       breakpoints: {
                           480: {
                               slidesPerView: 4.3,
@@ -190,8 +195,8 @@
                               slidesPerView: 7.2,
                           },
                           1280: {
-                              slidesPerView: 8,
-                              spaceBetween: 30,
+                              slidesPerView: 7,
+                              spaceBetween: 0,
                           },
                       },
                       navigation: {
@@ -202,7 +207,7 @@
               });
           }
       }"
-                 class="relative flex justify-center bg-gray-50 border border-gray-200 rounded-2xl w-full py-4 lg:py-8">
+                 class="relative flex justify-center bg-gray-50 border border-gray-200 rounded-2xl w-full py-4 lg:py-5">
                 <div class="absolute top-1/2 -translate-y-1/2 right-10 bg-white hidden lg:flex 2xl:hidden items-center justify-center size-9 shadow-md rounded-lg cursor-pointer z-[2]" x-ref="categorySwiperNext">
                     <i class="fal fa-arrow-right text-lg text-black"></i>
                 </div>
@@ -211,93 +216,83 @@
                 </div>
                 <div class="w-full pr-5 lg:pr-0 lg:w-4/5">
                     <div class="swiper" x-ref="categorySwiper">
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper py-3">
                             <div class="swiper-slide !h-full">
-                                <a href="#" class="flex flex-col items-center gap-3">
+                                <a href="#" class="flex hover:bg-white rounded-lg drop-shadow transition-all duration-300 ease-in-out px-5 py-2 flex-col items-center gap-3">
                                     <div class="w-full aspect-square">
                                         <img src="images/categories4.webp" alt="" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-sm lg:ext-base text-black text-center">
+                                    <h3 class="text-sm text-black text-center">
                                         موبایل و تبلت
                                     </h3>
                                 </a>
                             </div>
                             <div class="swiper-slide !h-full">
-                                <a href="#" class="flex flex-col items-center gap-3">
+                                <a href="#" class="flex hover:bg-white rounded-lg drop-shadow transition-all duration-300 ease-in-out px-5 py-2 flex-col items-center gap-3">
                                     <div class="w-full aspect-square">
                                         <img src="images/categories4.webp" alt="" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-sm lg:ext-base text-black text-center">
+                                    <h3 class="text-sm text-black text-center">
                                         موبایل و تبلت
                                     </h3>
                                 </a>
                             </div>
                             <div class="swiper-slide !h-full">
-                                <a href="#" class="flex flex-col items-center gap-3">
+                                <a href="#" class="flex hover:bg-white rounded-lg drop-shadow transition-all duration-300 ease-in-out px-5 py-2 flex-col items-center gap-3">
                                     <div class="w-full aspect-square">
                                         <img src="images/categories4.webp" alt="" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-sm lg:ext-base text-black text-center">
+                                    <h3 class="text-sm text-black text-center">
                                         موبایل و تبلت
                                     </h3>
                                 </a>
                             </div>
                             <div class="swiper-slide !h-full">
-                                <a href="#" class="flex flex-col items-center gap-3">
+                                <a href="#" class="flex hover:bg-white rounded-lg drop-shadow transition-all duration-300 ease-in-out px-5 py-2 flex-col items-center gap-3">
                                     <div class="w-full aspect-square">
                                         <img src="images/categories4.webp" alt="" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-sm lg:ext-base text-black text-center">
+                                    <h3 class="text-sm text-black text-center">
                                         موبایل و تبلت
                                     </h3>
                                 </a>
                             </div>
                             <div class="swiper-slide !h-full">
-                                <a href="#" class="flex flex-col items-center gap-3">
+                                <a href="#" class="flex hover:bg-white rounded-lg drop-shadow transition-all duration-300 ease-in-out px-5 py-2 flex-col items-center gap-3">
                                     <div class="w-full aspect-square">
                                         <img src="images/categories4.webp" alt="" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-sm lg:ext-base text-black text-center">
+                                    <h3 class="text-sm text-black text-center">
                                         موبایل و تبلت
                                     </h3>
                                 </a>
                             </div>
                             <div class="swiper-slide !h-full">
-                                <a href="#" class="flex flex-col items-center gap-3">
+                                <a href="#" class="flex hover:bg-white rounded-lg drop-shadow transition-all duration-300 ease-in-out px-5 py-2 flex-col items-center gap-3">
                                     <div class="w-full aspect-square">
                                         <img src="images/categories4.webp" alt="" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-sm lg:ext-base text-black text-center">
+                                    <h3 class="text-sm text-black text-center">
                                         موبایل و تبلت
                                     </h3>
                                 </a>
                             </div>
                             <div class="swiper-slide !h-full">
-                                <a href="#" class="flex flex-col items-center gap-3">
+                                <a href="#" class="flex hover:bg-white rounded-lg drop-shadow transition-all duration-300 ease-in-out px-5 py-2 flex-col items-center gap-3">
                                     <div class="w-full aspect-square">
                                         <img src="images/categories4.webp" alt="" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-sm lg:ext-base text-black text-center">
+                                    <h3 class="text-sm text-black text-center">
                                         موبایل و تبلت
                                     </h3>
                                 </a>
                             </div>
                             <div class="swiper-slide !h-full">
-                                <a href="#" class="flex flex-col items-center gap-3">
+                                <a href="#" class="flex hover:bg-white rounded-lg drop-shadow transition-all duration-300 ease-in-out px-5 py-2 flex-col items-center gap-3">
                                     <div class="w-full aspect-square">
                                         <img src="images/categories4.webp" alt="" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-sm lg:ext-base text-black text-center">
-                                        موبایل و تبلت
-                                    </h3>
-                                </a>
-                            </div>
-                            <div class="swiper-slide !h-full">
-                                <a href="#" class="flex flex-col items-center gap-3">
-                                    <div class="w-full aspect-square">
-                                        <img src="images/categories4.webp" alt="" class="w-full h-full object-cover">
-                                    </div>
-                                    <h3 class="text-sm lg:ext-base text-black text-center">
+                                    <h3 class="text-sm text-black text-center">
                                         موبایل و تبلت
                                     </h3>
                                 </a>
@@ -319,7 +314,7 @@
                   <h2 class="text-xl font-bold text-white">
                       پیشنهادات ویژه
                   </h2>
-                  <a href="#" class="flex items-center gap-2 text-white">
+                  <a href="#" class="relative flex items-center gap-2 text-white">
                       مشاهده همه
                       <i class="fal fa-chevron-left"></i>
                   </a>
@@ -380,9 +375,9 @@
                   <i class="fal fa-arrow-right text-xl text-black"></i>
               </div>
             <div class="swiper !flex !h-full" x-ref="popCategorySwiper">
-              <div class="swiper-wrapper !h-auto">
+              <div class="swiper-wrapper py-1 !h-auto">
                   <div class="swiper-slide !h-full">
-                      <div class="relative w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
+                      <div class="relative group w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 hover:-translate-y-1 transition-all duration-300 ease-in-out hover:drop-shadow rounded-2xl overflow-hidden">
                           <div class="absolute left-2 top-2 pl-2 pr-2 rounded-[15px] rounded-br-none bg-[#D32F2F] text-white ">۲۰٪</div>
                         <a href="#" class="flex items-center justify-center aspect-square w-44 overflow-hidden px-5">
                           <img src="images/pop-category1.webp" alt="" class="w-28 object-cover">
@@ -394,7 +389,7 @@
                         </a>
                         <div class="flex flex-grow"></div>
                         <div class="flex items-center w-full justify-between">
-                            <button type="button" class="flex items-center justify-center size-10 border border-gray-200 rounded-lg">
+                            <button type="button" class="hover:bg-primary-500 transition-all duration-300 ease-in-out flex items-center justify-center size-10 border border-gray-200 rounded-lg">
                                 <i class="fal fa-shopping-cart text-black text-lg"></i>
                             </button>
                             <div class="flex flex-col items-end gap-1">
@@ -523,12 +518,18 @@
                           </h2>
                           <div class="bg-primary-500 h-[3px] w-6"></div>
                       </div>
-                      <a href="#" class="flex items-center justify-center gap-2  py-2 px-4 text-black bg-primary-50 rounded-lg">
+                      <a href="#" class="relative group z-0 flex items-center justify-center gap-2  py-2 px-4 text-black bg-primary-50 rounded-lg
+                       after:absolute after:bg-primary-500 after:h-full after:w-0 after:right-0 after:left-0 after:-z-[1] hover:after:w-full after:transition-all after:duration-500  after:ease-in-out after:rounded-lg
+                       ">
                       <span>
                           مشاهده همه
                      </span>
-                          <div class="bg-primary flex items-center justify-center text-black size-10 lg:size-7 rounded-lg">
-                              <i class="fal fa-arrow-left text-xl lg:text-lg"></i>
+
+                          <div class="relative overflow-hidden bg-primary z-[0] flex items-center justify-center text-black size-10 lg:size-7 rounded-lg
+                            after:absolute after:inset-0  after:-z-[1] group-hover:after:bg-white after:transition-all after:duration-500  after:ease-in-out after:rounded-lg
+               ">
+                              <i class="fal fa-arrow-left text-xl lg:text-lg group-hover:opacity-0 -translate-x-2 group-hover:translate-x-6 transition-all duration-300 ease-in-out"></i>
+                              <i class="fal fa-arrow-left  text-xl lg:text-lg opacity-0 group-hover:opacity-100 -translate-x-6 group-hover:translate-x-2 transition-all duration-300 ease-in-out"></i>
                           </div>
                       </a>
                   </div>
@@ -571,9 +572,10 @@
                               <i class="fal fa-arrow-right text-xl text-black"></i>
                           </div>
                           <div class="swiper !flex !h-full" x-ref="newProductSwiper">
-                              <div class="swiper-wrapper !h-auto">
+                              <div class="swiper-wrapper py-1 !h-auto">
                                   <div class="swiper-slide !h-full">
-                                      <div class="w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
+                                      <div class="relative group w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 hover:-translate-y-1 transition-all duration-300 ease-in-out hover:drop-shadow rounded-2xl overflow-hidden">
+                                          <div class="absolute left-2 top-2 pl-2 pr-2 rounded-[15px] rounded-br-none bg-[#D32F2F] text-white ">۲۰٪</div>
                                           <a href="#" class="flex items-center justify-center aspect-square w-44 overflow-hidden px-5">
                                               <img src="images/pop-category1.webp" alt="" class="w-28 object-cover">
                                           </a>
@@ -584,11 +586,13 @@
                                           </a>
                                           <div class="flex flex-grow"></div>
                                           <div class="flex items-center w-full justify-between">
-                                              <button type="button" class="flex items-center justify-center size-10 border border-gray-200 rounded-lg">
+                                              <button type="button" class="hover:bg-primary-500 transition-all duration-300 ease-in-out flex items-center justify-center size-10 border border-gray-200 rounded-lg">
                                                   <i class="fal fa-shopping-cart text-black text-lg"></i>
                                               </button>
                                               <div class="flex flex-col items-end gap-1">
-                                                  <s class="text-gray-400 text-xs font-light"></s>
+                                                  <s class="text-gray-400 text-xs font-light">
+                                                      ۱۳٫۵۰۰٫۰۰۰
+                                                  </s>
                                                   <span class="text-black text-sm font-bold">
                                     ۱۲٫۷۸۰٫۰۰۰ تومان
                                 </span>
@@ -729,7 +733,7 @@
    <!--   BANNER SECTION-->
    <section class="container-standard my-32">
           <div class="grid lg:grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-5">
-              <div class="relative flex flex-col items-start gap-2 lg:gap-5 z-[0] bg-[#D6D9E0] rounded-2xl pr-5 pt-5 pb-20 lg:pt-10 overflow-hidden">
+              <div class="relative group flex flex-col items-start gap-2 lg:gap-5 z-[0] bg-[#D6D9E0] rounded-2xl pr-5 pt-5 pb-20 lg:pt-10 overflow-hidden">
                 <span class="font-light text-xs lg:text-base">
                     حرفه‌ای و کامل
                 </span>
@@ -740,11 +744,11 @@
                     مشاهده  همه
                     <i class="fal fa-chevron-left"></i>
                 </a>
-              <div class="absolute left-0 bottom-0 -z-[1]">
-                  <img src="images/banner2.webp" draggable="false" alt="" class="w-56 lg:w-80">
+              <div class="absolute aspect-square w-60  overflow-hidden left-5 bottom-5 -z-[1]">
+                  <img src="images/banner2.webp" draggable="false" alt="" class="w-full h-full group-hover:scale-105 transition-all duration-300 ease-in-out object-cover">
               </div>
               </div>
-              <div class="row-span-2 relative flex flex-col items-center gap-2 lg:gap-5 z-[0] bg-primary-50 rounded-2xl pr-5 pt-5 pb-20 lg:pt-10 overflow-hidden order-last lg:order-none">
+              <div class="row-span-2 relative group flex flex-col items-center gap-2 lg:gap-5 z-[0] bg-primary-50 rounded-2xl pr-5 pt-5 pb-20 lg:pt-10 overflow-hidden order-last lg:order-none">
                 <span class="font-light text-xs lg:text-base">
                     پرچمدارها
                 </span>
@@ -755,11 +759,11 @@
                     خریــد
                     <i class="fal fa-chevron-left"></i>
                 </a>
-              <div class="absolute right-0 left-0 bottom-0 -z-[1]">
-                  <img src="images/banner.webp" draggable="false" alt="" class="w-full">
+              <div class="absolute w-full aspect-square overflow-hidden right-0 left-0 bottom-0 -z-[1]">
+                  <img src="images/banner.webp" draggable="false" alt="" class="w-full h-full group-hover:scale-105 transition-all duration-300 ease-in-out">
               </div>
               </div>
-              <div class="relative flex flex-col items-start gap-2 lg:gap-5 z-[0] bg-[#D6D9E0] rounded-2xl pr-5 pt-5 pb-20 lg:pt-10 overflow-hidden">
+              <div class="relative group flex flex-col items-start gap-2 lg:gap-5 z-[0] bg-[#D6D9E0] rounded-2xl pr-5 pt-5 pb-20 lg:pt-10 overflow-hidden">
                 <span class="font-light text-xs lg:text-base">
                     پرفروش‌ترین ها
                 </span>
@@ -770,8 +774,8 @@
                       خریــد
                       <i class="fal fa-chevron-left"></i>
                   </a>
-                  <div class="absolute left-5 bottom-3 -z-[1]">
-                      <img src="images/banner3.webp" draggable="false" alt="" class="bannerImg3Shadow w-44 lg:w-60">
+                  <div class="absolute w-44 lg:w-52 aspect-square left-5 bottom-5 -z-[1]">
+                      <img src="images/banner3.webp" draggable="false" alt="" class="bannerImg3Shadow group-hover:scale-105 transition-all duration-300 w-full h-full object-cover">
                   </div>
               </div>
           </div>
@@ -788,12 +792,18 @@
                       </h2>
                       <div class="bg-primary-500 h-[3px] w-6"></div>
                   </div>
-                  <a href="#" class="flex items-center justify-center gap-2  py-2 px-4 text-black bg-primary-50 rounded-lg">
-                  <span>
-                      مشاهده همه
-                 </span>
-                      <div class="bg-primary flex items-center justify-center text-black size-10 lg:size-7 rounded-lg">
-                          <i class="fal fa-arrow-left text-xl lg:text-lg"></i>
+                  <a href="#" class="relative group z-0 flex items-center justify-center gap-2  py-2 px-4 text-black bg-primary-50 rounded-lg
+                       after:absolute after:bg-primary-500 after:h-full after:w-0 after:right-0 after:left-0 after:-z-[1] hover:after:w-full after:transition-all after:duration-500  after:ease-in-out after:rounded-lg
+                       ">
+                      <span>
+                          مشاهده همه
+                     </span>
+
+                      <div class="relative overflow-hidden bg-primary z-[0] flex items-center justify-center text-black size-10 lg:size-7 rounded-lg
+                            after:absolute after:inset-0  after:-z-[1] group-hover:after:bg-white after:transition-all after:duration-500  after:ease-in-out after:rounded-lg
+               ">
+                          <i class="fal fa-arrow-left text-xl lg:text-lg group-hover:opacity-0 -translate-x-2 group-hover:translate-x-6 transition-all duration-300 ease-in-out"></i>
+                          <i class="fal fa-arrow-left  text-xl lg:text-lg opacity-0 group-hover:opacity-100 -translate-x-6 group-hover:translate-x-2 transition-all duration-300 ease-in-out"></i>
                       </div>
                   </a>
               </div>
@@ -836,9 +846,10 @@
                           <i class="fal fa-arrow-right text-xl text-black"></i>
                       </div>
                       <div class="swiper !flex !h-full" x-ref="specialProductSwiper">
-                          <div class="swiper-wrapper !h-auto">
+                          <div class="swiper-wrapper py-1 !h-auto">
                               <div class="swiper-slide !h-full">
-                                  <div class="w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
+                                  <div class="relative group w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 hover:-translate-y-1 transition-all duration-300 ease-in-out hover:drop-shadow rounded-2xl overflow-hidden">
+                                      <div class="absolute left-2 top-2 pl-2 pr-2 rounded-[15px] rounded-br-none bg-[#D32F2F] text-white ">۲۰٪</div>
                                       <a href="#" class="flex items-center justify-center aspect-square w-44 overflow-hidden px-5">
                                           <img src="images/pop-category1.webp" alt="" class="w-28 object-cover">
                                       </a>
@@ -849,14 +860,16 @@
                                       </a>
                                       <div class="flex flex-grow"></div>
                                       <div class="flex items-center w-full justify-between">
-                                          <button type="button" class="flex items-center justify-center size-10 border border-gray-200 rounded-lg">
+                                          <button type="button" class="hover:bg-primary-500 transition-all duration-300 ease-in-out flex items-center justify-center size-10 border border-gray-200 rounded-lg">
                                               <i class="fal fa-shopping-cart text-black text-lg"></i>
                                           </button>
                                           <div class="flex flex-col items-end gap-1">
-                                              <s class="text-gray-400 text-xs font-light"></s>
+                                              <s class="text-gray-400 text-xs font-light">
+                                                  ۱۳٫۵۰۰٫۰۰۰
+                                              </s>
                                               <span class="text-black text-sm font-bold">
-                                ۱۲٫۷۸۰٫۰۰۰ تومان
-                            </span>
+                                    ۱۲٫۷۸۰٫۰۰۰ تومان
+                                </span>
                                           </div>
                                       </div>
                                   </div>
@@ -1114,12 +1127,18 @@
                           </h2>
                           <div class="bg-primary-500 h-[3px] w-6"></div>
                       </div>
-                      <a href="#" class="flex items-center justify-center gap-2  py-2 px-4 text-black bg-primary-50 rounded-lg">
-                              <span>
-                                  مشاهده همه
-                             </span>
-                          <div class="bg-primary flex items-center justify-center text-black size-10 lg:size-7 rounded-lg">
-                              <i class="fal fa-arrow-left text-xl lg:text-lg"></i>
+                      <a href="#" class="relative group z-0 flex items-center justify-center gap-2  py-2 px-4 text-black bg-primary-50 rounded-lg
+                       after:absolute after:bg-primary-500 after:h-full after:w-0 after:right-0 after:left-0 after:-z-[1] hover:after:w-full after:transition-all after:duration-500  after:ease-in-out after:rounded-lg
+                       ">
+                      <span>
+                          مشاهده همه
+                     </span>
+
+                          <div class="relative overflow-hidden bg-primary z-[0] flex items-center justify-center text-black size-10 lg:size-7 rounded-lg
+                            after:absolute after:inset-0  after:-z-[1] group-hover:after:bg-white after:transition-all after:duration-500  after:ease-in-out after:rounded-lg
+               ">
+                              <i class="fal fa-arrow-left text-xl lg:text-lg group-hover:opacity-0 -translate-x-2 group-hover:translate-x-6 transition-all duration-300 ease-in-out"></i>
+                              <i class="fal fa-arrow-left  text-xl lg:text-lg opacity-0 group-hover:opacity-100 -translate-x-6 group-hover:translate-x-2 transition-all duration-300 ease-in-out"></i>
                           </div>
                       </a>
                   </div>
@@ -1209,9 +1228,9 @@
                                   <i class="fal fa-arrow-right text-xl text-black"></i>
                               </div>
                               <div class="swiper !flex !h-full" x-ref="blogSwiper2">
-                                  <div class="swiper-wrapper !h-auto">
+                                  <div class="swiper-wrapper py-1 !h-auto">
                                       <div class="swiper-slide !h-full">
-                                          <div class="relative w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 rounded-2xl overflow-hidden">
+                                          <div class="relative w-full !h-full bg-white border border-gray-200 flex flex-col items-center gap-3 p-2 hover:drop-shadow hover:-translate-y-1 transition-all duration-300 ease-in-out rounded-2xl overflow-hidden">
                                               <a href="#" class="absolute inset-0 z-[2]"></a>
                                               <div class="absolute rounded-lg bg-white/60 text-sm px-4 py-2 top-4 right-3">
                                                   خرید لبتاپ
@@ -1367,11 +1386,11 @@
       <div class="bg-black pt-32 pb-14">
           <div class="container-standard">
             <div class="flex flex-col gap-10 lg:gap-8 items-center">
-                <div class="grid grid-cols-2 lg:grid-cols-7 gap-10 lg:gap-5 text-white">
+                <div class="grid grid-cols-2 lg:grid-cols-7 gap-10 lg:gap-7 text-white">
                     <div class="flex flex-col items-start gap-5">
-                        <div class="flex items-center gap-2">
-                            <div class="bg-primary w-5 h-[3px] rounded-xl"></div>
-                            <h4 class="text-lg font-bold text-primary-950">
+                        <div class="flex items-center gap-1">
+                            <div class="bg-primary w-3 h-[3px] rounded-xl"></div>
+                            <h4 class="text-base font-bold text-primary-950">
                                 دسترسی سریع
                             </h4>
                         </div>
@@ -1404,9 +1423,9 @@
                         </ul>
                     </div>
                     <div class="flex flex-col items-start gap-5">
-                        <div class="flex items-center gap-2">
-                            <div class="bg-primary w-5 h-[3px] rounded-xl"></div>
-                            <h4 class="text-lg font-semibold">
+                        <div class="flex items-center gap-1">
+                            <div class="bg-primary w-3 h-[3px] rounded-xl"></div>
+                            <h4 class="text-base font-semibold">
                                 محصولات
                             </h4>
                         </div>
@@ -1453,8 +1472,8 @@
                     <div class="col-span-2 flex justify-start lg:justify-end">
                         <div class="flex flex-col items-start gap-8">
                             <div class="flex items-center gap-2">
-                                <div class="bg-primary w-5 h-[3px] rounded-xl"></div>
-                                <h4 class="text-lg font-bold text-primary-950">
+                                <div class="bg-primary w-3 h-[3px] rounded-xl"></div>
+                                <h4 class="text-base font-bold text-primary-950">
                                     ارتباط با ما
                                 </h4>
                             </div>

@@ -99,41 +99,52 @@ body{
 .relative:has([x-ref="popCategorySwiperPrev"].swiper-button-disabled)
 .gradient-left {
     opacity: 0;
+    @apply pointer-events-none
+
 }
 
 .relative:has([x-ref="popCategorySwiperNext"].swiper-button-disabled)
 .gradient-right {
     opacity: 0;
+    @apply pointer-events-none
+
 }
 
 .relative:has([x-ref="newProductSwiperPrev"].swiper-button-disabled)
 .gradient-left {
     opacity: 0;
+    @apply pointer-events-none
+
 }
 
 .relative:has([x-ref="newProductSwiperNext"].swiper-button-disabled)
 .gradient-right {
     opacity: 0;
+    @apply pointer-events-none
 }
 
 .relative:has([x-ref="specialProductSwiperPrev"].swiper-button-disabled)
 .gradient-left {
     opacity: 0;
+    @apply pointer-events-none
 }
 
 .relative:has([x-ref="specialProductSwiperNext"].swiper-button-disabled)
 .gradient-right {
     opacity: 0;
+    @apply pointer-events-none
 }
 
 .relative:has([x-ref="blogSwiper2Prev"].swiper-button-disabled)
 .gradient-left {
     opacity: 0;
+    @apply pointer-events-none
 }
 
 .relative:has([x-ref="blogSwiper2Next"].swiper-button-disabled)
 .gradient-right {
     opacity: 0;
+    @apply pointer-events-none
 }
 
 .gradient-left,
