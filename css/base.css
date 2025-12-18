@@ -210,6 +210,11 @@ body{
 }
 
 .megaMenuItems{
+    scrollbar-width: thin !important;
+}
+
+
+.megaMenuItems{
     li a{
         @apply w-full pr-2 pl-4 py-3 flex items-center justify-between hover:text-primary-700 hover:bg-gray-500/5 transition-all ease-in-out duration-200 ;
     }
@@ -217,8 +222,13 @@ body{
 
 .megaMenuContent{
     direction: ltr;
-    @apply max-h-[450px] overflow-y-auto w-[800px] ;
+    @apply max-h-[450px] overflow-y-auto w-[800px] border-r border-gray-200;
 }
+
+.megaMenuContent{
+    scrollbar-width: thin !important;
+}
+
 
 .megaMenuWrapper ul>li:hover>div{
     @apply translate-y-0 opacity-100 visible transition-all duration-300 ease-in-out;
