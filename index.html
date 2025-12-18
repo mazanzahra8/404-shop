@@ -92,122 +92,172 @@
         </div>
       </div>
       <div class="hidden lg:block bg-black">
-        <div class="navbarMenu container-standard">
-          <ul class="flex items-center gap-2 font-bold text-white">
-              <li>
+        <div class="megaMenuWrapper container-standard">
+          <ul class=" flex items-center gap-2 font-bold text-white">
+              <li class="relative overflow-visible">
                   <a href="#" class="hover:bg-[#333333] py-2 px-3 transition-all duration-300 ease-in-out flex items-center gap-2">
                       دسته‌بندی محصولات
+                      <i class="fal fa-chevron-down"></i>
                   </a>
-                  <ul>
-                      <li>
-                          <a href="#">
-                              لپتاپ
-                          </a>
-                          <ul>
-                              <li>
-                                  <a href="#">
-                                      لپتاپ
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#">
-                                      موبایل و تبلت
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#">
-                                      کنسول بازی
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#">
-                                      ساعت هوشمند
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#">
-                                      هارد
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#">
-                                      اسپیکر و بلندگو
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#">
-                                      لوازم جانبی
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#">
-                                      دوربین مدار بسته
-                                  </a>
-                              </li>
-                          </ul>
-
-                      </li>
-                      <li>
-                          <a href="#">
-                              موبایل و تبلت
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              کنسول بازی
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              ساعت هوشمند
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              هارد
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              اسپیکر و بلندگو
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              لوازم جانبی
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              دوربین مدار بسته
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              دوربین مدار بسته
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              دوربین مدار بسته
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              دوربین مدار بسته
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              دوربین مدار بسته
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              دوربین مدار بسته
-                          </a>
-                      </li>
-                  </ul>
+                  <div x-data="{ activeSubMenu2: 'item1' }"
+                          class="w-auto absolute top-10 translate-y-7 bg-white invisible opacity-0">
+                    <div class="w-auto flex ">
+                        <ul class="subMenu1">
+                            <li>
+                                <a href="#" @mouseenter="activeSubMenu2 = 'item1'">
+                                    <i class="fal fa-chevron-left"></i>
+                                    لپتاپ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" @mouseenter="activeSubMenu2 = 'item2'">
+                                    <i class="fal fa-chevron-left"></i>
+                                    موبایل و تبلت
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-chevron-left"></i>
+                                    کنسول بازی
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-chevron-left"></i>
+                                    ساعت هوشمند
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-chevron-left"></i>
+                                    هارد
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-chevron-left"></i>
+                                    اسپیکر و بلندگو
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-chevron-left"></i>
+                                    لوازم جانبی
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-chevron-left"></i>
+                                    دوربین مدار بسته
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-chevron-left"></i>
+                                    دوربین مدار بسته
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-chevron-left"></i>
+                                    دوربین مدار بسته
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-chevron-left"></i>
+                                    دوربین مدار بسته
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-chevron-left"></i>
+                                    دوربین مدار بسته
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fal fa-chevron-left"></i>
+                                    دوربین مدار بسته
+                                </a>
+                            </li>
+                        </ul>
+                         <div class="subMenu2">
+                             <template x-if="activeSubMenu2 === 'item1'">
+                                 <div class="grid grid-cols-3">
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mb-3">کنسول‌های خانگی</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">پلی‌استیشن 5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">اکس‌باکس سری X</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">نینتندو سوئیچ</a>
+                                     </div>
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mt-4 mb-3">دسته بازی</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">دسته PS5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">دسته Xbox</a>
+                                     </div>
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mt-4 mb-3">بازی‌ها</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">بازی PS5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">بازی Xbox</a>
+                                     </div>
+                                 </div>
+                             </template>
+                             <template x-if="activeSubMenu2 === 'item2'">
+                                 <div class="grid grid-cols-3">
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mb-3">کنسول‌های خانگی</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">پلی‌استیشن 5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">اکس‌باکس سری X</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">نینتندو سوئیچ</a>
+                                     </div>
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mt-4 mb-3">دسته بازی</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">دسته PS5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">دسته Xbox</a>
+                                     </div>
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mt-4 mb-3">بازی‌ها</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">بازی PS5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">بازی Xbox</a>
+                                     </div>
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mb-3">کنسول‌های خانگی</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">پلی‌استیشن 5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">اکس‌باکس سری X</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">نینتندو سوئیچ</a>
+                                     </div>
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mt-4 mb-3">دسته بازی</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">دسته PS5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">دسته Xbox</a>
+                                     </div>
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mt-4 mb-3">بازی‌ها</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">بازی PS5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">بازی Xbox</a>
+                                     </div>
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mb-3">کنسول‌های خانگی</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">پلی‌استیشن 5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">اکس‌باکس سری X</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">نینتندو سوئیچ</a>
+                                     </div>
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mt-4 mb-3">دسته بازی</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">دسته PS5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">دسته Xbox</a>
+                                     </div>
+                                     <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                         <h4 class="font-bold text-sm text-gray-800 mt-4 mb-3">بازی‌ها</h4>
+                                         <a href="#" class="py-1 hover:text-blue-600">بازی PS5</a>
+                                         <a href="#" class="py-1 hover:text-blue-600">بازی Xbox</a>
+                                     </div>
+                                 </div>
+                             </template>
+                         </div>
+                    </div>
+                  </div>
               </li>
               <li>
               <a href="#" class="hover:bg-[#333333] py-2 px-3 transition-all duration-300 ease-in-out">
