@@ -9,8 +9,587 @@
   <link rel="stylesheet" href="css/fontawesome-all.min.css" />
 </head>
 
-<body class="">
-  <header>
+<body x-data="{ showCategoryMenuItem: false }">
+
+    <div x-show="showCategoryMenuItem == true" x-cloak  x-data="{ activeCategoryMenuItem: 'item1' }"
+          class="flex h-full overflow-hidden w-full bg-white fixed top-0 right-0 left-0 z-[99]">
+        <div class="bg-neutral-100 w-[95px] shrink-0 overflow-y-auto max-h-[calc(100vh-6rem)] ltr">
+            <div class="flex flex-col items-center py-4 px-2 border-b" @click="activeCategoryMenuItem = 'item1'" :class="{ 'bg-white text-primary-800': activeCategoryMenuItem === 'item1'}">
+                <div class="flex mb-1">
+                    <i class="fal fa-laptop"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item1'}">
+                    لپ تاپ
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b" @click="activeCategoryMenuItem = 'item2'" :class="{ 'bg-white text-primary-800': activeCategoryMenuItem === 'item2'}">
+                <div class="flex mb-1">
+                    <i class="fal fa-mobile"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item2'}">
+                  موبایل
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b" @click="activeCategoryMenuItem = 'item3'" :class="{ 'bg-white text-primary-800': activeCategoryMenuItem === 'item3'}">
+                <div class="flex mb-1">
+                    <i class="fal fa-mobile"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item3'}">
+                  موبایل
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b" @click="activeCategoryMenuItem = 'item4'" :class="{ 'bg-white text-primary-800': activeCategoryMenuItem === 'item4'}">
+                <div class="flex mb-1">
+                    <i class="fal fa-gamepad"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item4'}">
+                  کنسول بازی
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-laptop"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item1'}">
+                    لپ تاپ
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-mobile"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item2'}">
+                  موبایل
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-mobile"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item3'}">
+                  موبایل
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-gamepad"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item4'}">
+                  کنسول بازی
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-laptop"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item1'}">
+                    لپ تاپ
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-mobile"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item2'}">
+                  موبایل
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-mobile"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item3'}">
+                  موبایل
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-gamepad"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item4'}">
+                  کنسول بازی
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-laptop"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item1'}">
+                    لپ تاپ
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-mobile"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item2'}">
+                  موبایل
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-mobile"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item3'}">
+                  موبایل
+                </span>
+            </div>
+            <div class="flex flex-col items-center py-4 px-2 border-b">
+                <div class="flex mb-1">
+                    <i class="fal fa-gamepad"></i>
+                </div>
+                <span class="text-center text-neutral-700 text-sm font-light" :class="{ 'text-primary-800': activeCategoryMenuItem === 'item4'}">
+                  کنسول بازی
+                </span>
+            </div>
+        </div>
+        <div class="w-full overflow-y-auto max-h-[calc(100vh-6rem)] ltr">
+            <template x-if="activeCategoryMenuItem === 'item1'">
+                <div class="w-full rtl">
+                    <div class="w-full flex flex-col border-b" x-data="{ showSubMenu: false }">
+                        <div class="w-full flex items-center justify-between text-sm py-3 px-4  cursor-pointer select-none" :class="{ 'border-none': selected_index == 1, ' border-b border-gray-300': selected_index !== 1 }"
+                             @click="showSubMenu !== true ? showSubMenu = true : showSubMenu = false">
+                  <span>
+                    گوشی های اپل
+                  </span>
+                            <i class="fal" :class="{ 'fa-chevron-up': showSubMenu == true, 'fa-chevron-down': showSubMenu !== true }"></i>
+                        </div>
+                        <div class="grid grid-cols-3 p-3"
+                             x-show="showSubMenu == true" x-cloak>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <i class="fal fa-th text-lg text-gray-500"></i>
+                                </div>
+                                <span class="text-xs font-light">
+                          همه کالاها
+                        </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col border-b" x-data="{ showSubMenu: false }">
+                        <div class="w-full flex items-center justify-between text-sm py-3 px-4  cursor-pointer select-none" :class="{ 'border-none': selected_index == 1, ' border-b border-gray-300': selected_index !== 1 }"
+                             @click="showSubMenu !== true ? showSubMenu = true : showSubMenu = false">
+                  <span>
+                    گوشی های اپل
+                  </span>
+                            <i class="fal" :class="{ 'fa-chevron-up': showSubMenu == true, 'fa-chevron-down': showSubMenu !== true }"></i>
+                        </div>
+                        <div class="grid grid-cols-3 p-3"
+                             x-show="showSubMenu == true" x-cloak>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <i class="fal fa-th text-lg text-gray-500"></i>
+                                </div>
+                                <span class="text-xs font-light">
+                          همه کالاها
+                        </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col border-b" x-data="{ showSubMenu: false }">
+                        <div class="w-full flex items-center justify-between text-sm py-3 px-4  cursor-pointer select-none" :class="{ 'border-none': selected_index == 1, ' border-b border-gray-300': selected_index !== 1 }"
+                             @click="showSubMenu !== true ? showSubMenu = true : showSubMenu = false">
+                  <span>
+                    گوشی های اپل
+                  </span>
+                            <i class="fal" :class="{ 'fa-chevron-up': showSubMenu == true, 'fa-chevron-down': showSubMenu !== true }"></i>
+                        </div>
+                        <div class="grid grid-cols-3 p-3"
+                             x-show="showSubMenu == true" x-cloak>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <i class="fal fa-th text-lg text-gray-500"></i>
+                                </div>
+                                <span class="text-xs font-light">
+                          همه کالاها
+                        </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col border-b" x-data="{ showSubMenu: false }">
+                        <div class="w-full flex items-center justify-between text-sm py-3 px-4  cursor-pointer select-none" :class="{ 'border-none': selected_index == 1, ' border-b border-gray-300': selected_index !== 1 }"
+                             @click="showSubMenu !== true ? showSubMenu = true : showSubMenu = false">
+                  <span>
+                    گوشی های اپل
+                  </span>
+                            <i class="fal" :class="{ 'fa-chevron-up': showSubMenu == true, 'fa-chevron-down': showSubMenu !== true }"></i>
+                        </div>
+                        <div class="grid grid-cols-3 p-3"
+                             x-show="showSubMenu == true" x-cloak>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <i class="fal fa-th text-lg text-gray-500"></i>
+                                </div>
+                                <span class="text-xs font-light">
+                          همه کالاها
+                        </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col border-b" x-data="{ showSubMenu: false }">
+                        <div class="w-full flex items-center justify-between text-sm py-3 px-4  cursor-pointer select-none" :class="{ 'border-none': selected_index == 1, ' border-b border-gray-300': selected_index !== 1 }"
+                             @click="showSubMenu !== true ? showSubMenu = true : showSubMenu = false">
+                  <span>
+                    گوشی های اپل
+                  </span>
+                            <i class="fal" :class="{ 'fa-chevron-up': showSubMenu == true, 'fa-chevron-down': showSubMenu !== true }"></i>
+                        </div>
+                        <div class="grid grid-cols-3 p-3"
+                             x-show="showSubMenu == true" x-cloak>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <i class="fal fa-th text-lg text-gray-500"></i>
+                                </div>
+                                <span class="text-xs font-light">
+                          همه کالاها
+                        </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col border-b" x-data="{ showSubMenu: false }">
+                        <div class="w-full flex items-center justify-between text-sm py-3 px-4  cursor-pointer select-none" :class="{ 'border-none': selected_index == 1, ' border-b border-gray-300': selected_index !== 1 }"
+                             @click="showSubMenu !== true ? showSubMenu = true : showSubMenu = false">
+                  <span>
+                    گوشی های اپل
+                  </span>
+                            <i class="fal" :class="{ 'fa-chevron-up': showSubMenu == true, 'fa-chevron-down': showSubMenu !== true }"></i>
+                        </div>
+                        <div class="grid grid-cols-3 p-3"
+                             x-show="showSubMenu == true" x-cloak>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <i class="fal fa-th text-lg text-gray-500"></i>
+                                </div>
+                                <span class="text-xs font-light">
+                          همه کالاها
+                        </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col border-b" x-data="{ showSubMenu: false }">
+                        <div class="w-full flex items-center justify-between text-sm py-3 px-4  cursor-pointer select-none" :class="{ 'border-none': selected_index == 1, ' border-b border-gray-300': selected_index !== 1 }"
+                             @click="showSubMenu !== true ? showSubMenu = true : showSubMenu = false">
+                  <span>
+                    گوشی های اپل
+                  </span>
+                            <i class="fal" :class="{ 'fa-chevron-up': showSubMenu == true, 'fa-chevron-down': showSubMenu !== true }"></i>
+                        </div>
+                        <div class="grid grid-cols-3 p-3"
+                             x-show="showSubMenu == true" x-cloak>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <i class="fal fa-th text-lg text-gray-500"></i>
+                                </div>
+                                <span class="text-xs font-light">
+                          همه کالاها
+                        </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col border-b" x-data="{ showSubMenu: false }">
+                        <div class="w-full flex items-center justify-between text-sm py-3 px-4  cursor-pointer select-none" :class="{ 'border-none': selected_index == 1, ' border-b border-gray-300': selected_index !== 1 }"
+                             @click="showSubMenu !== true ? showSubMenu = true : showSubMenu = false">
+                  <span>
+                    گوشی های اپل
+                  </span>
+                            <i class="fal" :class="{ 'fa-chevron-up': showSubMenu == true, 'fa-chevron-down': showSubMenu !== true }"></i>
+                        </div>
+                        <div class="grid grid-cols-3 p-3"
+                             x-show="showSubMenu == true" x-cloak>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <i class="fal fa-th text-lg text-gray-500"></i>
+                                </div>
+                                <span class="text-xs font-light">
+                          همه کالاها
+                        </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col border-b" x-data="{ showSubMenu: false }">
+                        <div class="w-full flex items-center justify-between text-sm py-3 px-4  cursor-pointer select-none" :class="{ 'border-none': selected_index == 1, ' border-b border-gray-300': selected_index !== 1 }"
+                             @click="showSubMenu !== true ? showSubMenu = true : showSubMenu = false">
+                  <span>
+                    گوشی های اپل
+                  </span>
+                            <i class="fal" :class="{ 'fa-chevron-up': showSubMenu == true, 'fa-chevron-down': showSubMenu !== true }"></i>
+                        </div>
+                        <div class="grid grid-cols-3 p-3"
+                             x-show="showSubMenu == true" x-cloak>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <i class="fal fa-th text-lg text-gray-500"></i>
+                                </div>
+                                <span class="text-xs font-light">
+                          همه کالاها
+                        </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <template x-if="activeCategoryMenuItem === 'item2'">
+                <div class="w-full rtl">
+                    <div class="w-full flex flex-col border-b" x-data="{ showSubMenu: false }">
+                        <div class="w-full flex items-center justify-between text-sm py-3 px-4  cursor-pointer select-none" :class="{ 'border-none': selected_index == 1, ' border-b border-gray-300': selected_index !== 1 }"
+                             @click="showSubMenu !== true ? showSubMenu = true : showSubMenu = false">
+                  <span>
+                    گوشی های اپل
+                  </span>
+                            <i class="fal" :class="{ 'fa-chevron-up': showSubMenu == true, 'fa-chevron-down': showSubMenu !== true }"></i>
+                        </div>
+                        <div class="grid grid-cols-3 p-3"
+                             x-show="showSubMenu == true" x-cloak>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <img src="https://dkstatics-public.digikala.com/digikala-products/5af568b4909435c6a215ad5e728e902db234b673_1736597759.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+                                         class="w-10 mix-blend-multiply"
+                                    >
+                                </div>
+                                <span class="text-xs font-light">
+                            آیفون ۱۶
+                        </span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-3">
+                                <div class="size-16 flex justify-center items-center rounded-full bg-neutral-100">
+                                    <i class="fal fa-th text-lg text-gray-500"></i>
+                                </div>
+                                <span class="text-xs font-light">
+                          همه کالاها
+                        </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+    <nav class="lg:hidden  bg-white py-3 fixed bottom-0 left-0 right-0 z-[100] px-2  drop-shadow-xl shadow-2xl shadow-black/70">
+    <ul class="grid grid-cols-5">
+        <li>
+            <a href="#" class="flex flex-col items-center gap-3 text-xs">
+                <i class="fal fa-home text-2xl text-gray-700"></i>
+                خانه
+            </a>
+        </li>
+        <li>
+            <a href="#" class="flex flex-col items-center gap-3 text-xs active" @click="showCategoryMenuItem = true " @click="showCategoryMenuItem !== true ? showCategoryMenuItem = true : showCategoryMenuItem = false">
+                <i class="fal fa-store text-2xl text-gray-700"></i>
+                دسته‌بندی
+            </a>
+        </li>
+        <li>
+            <a href="#" class="flex flex-col items-center gap-3 text-xs">
+                <i class="fal fa-shopping-cart text-2xl text-gray-700"></i>
+                سبدخرید
+            </a>
+        </li>
+        <li>
+            <a href="#" class="flex flex-col items-center gap-3 text-xs">
+                <i class="fal fa-file-alt text-2xl text-gray-700"></i>
+                مجله
+            </a>
+        </li>
+        <li>
+            <a href="#" class="flex flex-col items-center gap-3 text-xs">
+                <i class="fal fa-user text-2xl text-gray-700"></i>
+                عضویت
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<header>
       <div class="py-2 border border-gray-200 bg-white">
           <div class="container-standard">
               <div class="flex items-center justify-between text-xs lg:text-sm">
@@ -1312,7 +1891,7 @@
                     <i class="fal fa-chevron-left"></i>
                 </a>
               <div class="absolute left-5 bottom-5 -z-[1]">
-                  <img src="images/banner2.webp" draggable="false" alt="" class="aspect-square lg:w-52 group-hover:scale-105 transition-all duration-300 ease-in-out object-cover">
+                  <img src="images/banner2.webp" draggable="false" alt="" class="aspect-square w-32 lg:w-52 group-hover:scale-105 transition-all duration-300 ease-in-out object-cover">
               </div>
               </div>
               <div class="row-span-2 relative group flex flex-col items-center gap-2 lg:gap-5 z-[0] bg-primary-50 rounded-2xl pr-5 pt-5 pb-20 lg:pt-10 overflow-hidden order-last lg:order-none">
@@ -1327,7 +1906,7 @@
                     <i class="fal fa-chevron-left"></i>
                 </a>
               <div class="absolute overflow-hidden right-0 left-0 -bottom-10 -z-[1]">
-                  <img src="images/banner1.webp" draggable="false" alt="" class=" w-full aspect-square group-hover:scale-105 transition-all duration-300 ease-in-out">
+                  <img src="images/banner1.webp" draggable="false" alt="" class="w-full aspect-square group-hover:scale-105 transition-all duration-300 ease-in-out">
               </div>
               </div>
               <div class="relative group flex flex-col items-start gap-2 lg:gap-5 z-[0] bg-[#F5F3FF] rounded-2xl pr-5 pt-5 pb-20 lg:pt-10 overflow-hidden">
@@ -1342,7 +1921,7 @@
                       <i class="fal fa-chevron-left"></i>
                   </a>
                   <div class="absolute left-5 bottom-5 -z-[1]">
-                      <img src="images/banner3.webp" draggable="false" alt="" class="bannerImg3Shadow w-44 lg:w-52 aspect-square group-hover:scale-105 transition-all duration-300 w-full h-full object-cover">
+                      <img src="images/banner3.webp" draggable="false" alt="" class="bannerImg3Shadow w-32 lg:w-52 aspect-square group-hover:scale-105 transition-all duration-300 w-full h-full object-cover">
                   </div>
               </div>
           </div>

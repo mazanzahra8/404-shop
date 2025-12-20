@@ -199,9 +199,15 @@ body{
     @apply bg-primary-500 w-5 rounded-[30px];
 }
 
+/* ALPINE CSS */
+
+[x-cloak] { display: none !important; }
 
 .rtl{
     direction: rtl;
+}
+.ltr{
+    direction: ltr;
 }
 
 .megaMenuItems{
