@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>فروشگاه 404</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+</head>
+
+<body>
+
+<header>
+    <div class="py-2 border border-gray-200 bg-white">
+        <div class="container-standard">
+            <div class="flex items-center justify-between text-xs lg:text-sm">
+                <div class="hidden lg:flex items-center gap-1">
+                    <i class="fal fa-clock"></i>
+                    <span class="font-light">
+                      ساعات کاری:
+                  </span>
+                    <span>
+                      شنبه تا پنج شنبه 10 صبح تا 9 شب
+                  </span>
+                </div>
+                <div class="w-full lg:w-auto flex items-center justify-between lg:justify-start gap-5">
+                    <div class="flex items-center gap-1">
+                        <i class="fal fa-map-marker-alt"></i>
+                        <span class="hidden lg:block font-light">
+                        آدرس:
+                         </span>
+                        <span>
+                            مازندران، آمل، خیابان هراز، آفتاب یک
+                          </span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <i class="fal fa-phone rotate-90"></i>
+                        <span class="hidden lg:block font-light">
+                               پشتیبانی:
+                          </span>
+                        <span>
+                            ۰۱۱-۴۴۴۴۵۴۰۴
+                          </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav x-data="{scrolled: false}"
+         @scroll.window="scrolled = (window.scrollY > 0)"
+         :class="scrolled ? 'top-0' : 'top-10'"
+         class="fixed left-0 right-0 z-50 navBar">
+        <div class="bg-white py-2">
+            <div class="container-standard">
+                <div class="flex items-center justify-between">
+                    <div class="w-1/3 flex gap-4 items-center text-2xl lg:hidden">
+                        <i class="fal fa-stream" ></i>
+                        <i class="fal fa-search"></i>
+                    </div>
+                    <div class="w-1/2 flex items-center justify-center lg:justify-normal gap-3">
+                        <img src="images/logo.webp" alt="" class="w-16">
+                        <div class="hidden flex-grow lg:flex items-center justify-between rounded-lg overflow-hidden bg-gray-100 pl-3">
+                            <select class="filterSelectSearch">
+                                <option>
+                                    دسته‌بندی محصولات
+                                </option>
+                            </select>
+                            <input type="search" placeholder="محصول مورد نظر خود را جستجو کنید" class="text-sm font-light flex-grow text-black bg-transparent placeholder-gray-500 border-none focus:ring-0">
+                            <i class="fal fa-search text-xl text-black"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <button type="button" class="lg:bg-primary flex items-center justify-center text-black size-10 rounded-lg">
+                            <i class="fal fa-shopping-cart text-xl lg:text-lg"></i>
+                        </button>
+                        <a href="#" class="group relative z-[0] flex items-center justify-center gap-2  lg:py-2 lg:px-4 text-black bg-primary-50 rounded-lg transition-all duration-300 ease-in-out
+                after:absolute after:bg-primary-500 after:h-full after:w-0 after:right-0 after:left-0 after:-z-[1] hover:after:w-full after:transition-all after:duration-500  after:ease-in-out after:rounded-lg
+              ">
+                            <div class="relative overflow-hidden bg-primary z-[0] flex items-center justify-center text-black size-10 lg:size-7 rounded-lg
+                            after:absolute after:inset-0  after:-z-[1] group-hover:after:bg-white after:transition-all after:duration-500  after:ease-in-out after:rounded-lg
+               ">
+                                <i class="fal fa-user text-xl lg:text-lg group-hover:opacity-0 -translate-x-2 group-hover:translate-x-6 transition-all duration-300 ease-in-out"></i>
+                                <i class="fal fa-user text-xl lg:text-lg opacity-0 group-hover:opacity-100 -translate-x-6 group-hover:translate-x-2 transition-all duration-300 ease-in-out"></i>
+                            </div>
+                            <span class="hidden lg:block">
+                  ورود | ثبت‌نام
+                </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden lg:block bg-black">
+            <div class="megaMenuWrapper container-standard">
+                <ul class=" flex items-center gap-2 font-bold text-white">
+                    <li class="relative overflow-visible">
+                        <a href="#" class="hover:bg-[#333333] py-2 px-3 transition-all duration-300 ease-in-out flex items-center gap-2">
+                            دسته‌بندی محصولات
+                            <i class="fal fa-chevron-down"></i>
+                        </a>
+                        <div x-data="{ activeMegaMenuItem: 'item1' }"
+                             class="hidden lg:block w-auto absolute top-10 translate-y-7 border border-gray-200 shadow bg-white invisible opacity-0">
+                            <div class="w-auto flex">
+                                <ul class="megaMenuItems">
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item1'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            لپتاپ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item2'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            موبایل و تبلت
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item3'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            کنسول بازی
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item4'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            ساعت هوشمند
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item5'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            هارد
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item6'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            اسپیکر و بلندگو
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item7'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            لوازم جانبی
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item8'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            دوربین مدار بسته
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item9'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            دوربین مدار بسته
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item10'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            دوربین مدار بسته
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item11'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            دوربین مدار بسته
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item12'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            دوربین مدار بسته
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @mouseenter="activeMegaMenuItem = 'item13'">
+                                            <i class="fal fa-chevron-left"></i>
+                                            دوربین مدار بسته
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="megaMenuContent">
+                                    <template x-if="activeMegaMenuItem === 'item1'">
+                                        <div class="w-full grid grid-cols-3 rtl">
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <template x-if="activeMegaMenuItem === 'item2'">
+                                        <div class="w-full grid grid-cols-3 rtl">
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <template x-if="activeMegaMenuItem === 'item3'">
+                                        <div class="w-full grid grid-cols-3 rtl">
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <template x-if="activeMegaMenuItem === 'item4'">
+                                        <div class="w-full grid grid-cols-3 rtl">
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <template x-if="activeMegaMenuItem === 'item5'">
+                                        <div class="w-full grid grid-cols-3 rtl">
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm">کنسول‌های خانگی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">پلی‌استیشن 5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">اکس‌باکس سری X</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">نینتندو سوئیچ</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                            <div class="flex flex-col text-xs font-normal text-gray-500 p-4">
+                                                <a href="#" class="flex items-center mb-3 gap-1 hover:text-primary-700 text-gray-800 transition-all duration-300 ease-in-out">
+                                                    <h4 class="font-bold text-sm"> دسته بازی</h4>
+                                                    <i class="fa fa-chevron-left text-xs"></i>
+                                                </a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته PS5</a>
+                                                <a href="#" class="py-1 hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                                <a href="#" class="py-1hover:text-primary-700 transition-all duration-300 ease-in-out">دسته Xbox</a>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:bg-[#333333] py-2 px-3 transition-all duration-300 ease-in-out">
+                            فروشگاه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:bg-[#333333] py-2 px-3 transition-all duration-300 ease-in-out">
+                            بلاگ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:bg-[#333333] py-2 px-3 transition-all duration-300 ease-in-out">
+                            تماس با ما
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:bg-[#333333] py-2 px-3 transition-all duration-300 ease-in-out">
+                            درباره ما
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script type="module" src="js/app.js"></script>
+
+
+</body>
+</html>
