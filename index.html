@@ -674,13 +674,13 @@
         <div x-data="{ showMegaMenuItems: false }"
              class="container-standard">
           <ul class="flex items-center gap-2 font-bold text-white">
-              <li class="relative overflow-visible">
+              <li class="relative overflow-visible"  @mouseleave="showMegaMenuItems = false; activeMegaMenuItem = null">
                   <a href="#" @mouseenter="showMegaMenuItems = true"
                      class="hover:bg-[#333333] py-2 px-3 transition-all duration-300 ease-in-out flex items-center gap-2">
                       دسته‌بندی محصولات
                       <i class="fal fa-chevron-down"></i>
                   </a>
-                  <div @mouseleave="showMegaMenuItems = false; activeMegaMenuItem = null" x-data="{ activeMegaMenuItem: null }"
+                  <div @mouseleave="activeMegaMenuItem = null" x-data="{ activeMegaMenuItem: null }"
                           class="hidden lg:block w-auto absolute top-10 border border-gray-200 shadow bg-white">
                     <div class="w-auto flex">
                         <ul x-show="showMegaMenuItems == true" x-cloak class="megaMenuItems">
